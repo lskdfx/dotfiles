@@ -2,7 +2,10 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "catppuccin",
     },
+    version = false,
   },
+  { "folke/lazy.nvim", version = false },
+  { "wakatime/vim-wakatime", lazy = false },
 }

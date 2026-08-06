@@ -1,0 +1,168 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[ ](fg:{{colors.primary.default.hex}})\
+$os\
+$username\
+[ ](bg:{{colors.secondary.default.hex}} fg:{{colors.primary.default.hex}})\
+$directory\
+[ ](bg:{{colors.tertiary.default.hex}} fg:{{colors.secondary.default.hex}})\
+$git_branch\
+$git_status\
+[ ](bg:{{colors.primary_container.default.hex}} fg:{{colors.tertiary.default.hex}})\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[ ](bg:{{colors.secondary_container.default.hex}} fg:{{colors.primary_container.default.hex}})\
+$conda\
+$docker_context\
+[ ](bg:{{colors.tertiary_container.default.hex}} fg:{{colors.secondary_container.default.hex}})\
+$time\
+[ ](fg:{{colors.tertiary_container.default.hex}})\
+$cmd_duration\
+$line_break\
+$character"""
+
+[os]
+disabled = false
+style = "bg:{{colors.primary.default.hex}} fg:{{colors.on_primary.default.hex}}"
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:{{colors.primary.default.hex}} fg:{{colors.on_primary.default.hex}}"
+style_root = "bg:{{colors.error.default.hex}} fg:{{colors.on_error.default.hex}}"
+format = '[ $user ]($style)'
+
+[directory]
+style = "bg:{{colors.secondary.default.hex}} fg:{{colors.on_secondary.default.hex}}"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:{{colors.tertiary.default.hex}} fg:{{colors.on_tertiary.default.hex}}"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+disabled = true
+
+[nodejs]
+symbol = ""
+style = "bg:{{colors.primary_container.default.hex}} fg:{{colors.on_primary_container.default.hex}}"
+format = '[ $symbol( $version) ]($style)'
+
+[c]
+symbol = " "
+style = "bg:{{colors.primary_container.default.hex}} fg:{{colors.on_primary_container.default.hex}}"
+format = '[ $symbol( $version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:{{colors.primary_container.default.hex}} fg:{{colors.on_primary_container.default.hex}}"
+format = '[ $symbol( $version) ]($style)'
+
+[golang]
+symbol = ""
+style = "bg:{{colors.primary_container.default.hex}} fg:{{colors.on_primary_container.default.hex}}"
+format = '[ $symbol( $version) ]($style)'
+
+[php]
+symbol = ""
+style = "bg:{{colors.primary_container.default.hex}} fg:{{colors.on_primary_container.default.hex}}"
+format = '[ $symbol( $version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:{{colors.primary_container.default.hex}} fg:{{colors.on_primary_container.default.hex}}"
+format = '[ $symbol( $version) ]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:{{colors.primary_container.default.hex}} fg:{{colors.on_primary_container.default.hex}}"
+format = '[ $symbol( $version) ]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:{{colors.primary_container.default.hex}} fg:{{colors.on_primary_container.default.hex}}"
+format = '[ $symbol( $version) ]($style)'
+
+[python]
+symbol = ""
+style = "bg:{{colors.primary_container.default.hex}} fg:{{colors.on_primary_container.default.hex}}"
+format = '[ $symbol( $version)(\($virtualenv\)) ]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:{{colors.secondary_container.default.hex}} fg:{{colors.on_secondary_container.default.hex}}"
+format = '[ $symbol( $context) ]($style)'
+
+[conda]
+symbol = "  "
+style = "bg:{{colors.secondary_container.default.hex}} fg:{{colors.on_secondary_container.default.hex}}"
+format = '[ $symbol$environment ]($style)'
+ignore_base = false
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:{{colors.tertiary_container.default.hex}} fg:{{colors.on_tertiary_container.default.hex}}"
+format = '[   $time ]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[ ❯](bold fg:{{colors.primary.default.hex}})'
+error_symbol = '[ ❯](bold fg:{{colors.error.default.hex}})'
+vimcmd_symbol = '[ ❮](bold fg:{{colors.primary.default.hex}})'
+vimcmd_replace_one_symbol = '[ ❮](bold fg:{{colors.tertiary.default.hex}})'
+vimcmd_replace_symbol = '[ ❮](bold fg:{{colors.tertiary.default.hex}})'
+vimcmd_visual_symbol = '[ ❮](bold fg:{{colors.secondary.default.hex}})'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+style = "fg:{{colors.on_surface.default.hex}}"
+disabled = false
+show_notifications = true
+min_time_to_notify = 45000
+
+[package]
+disabled = true

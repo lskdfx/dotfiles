@@ -2,7 +2,7 @@
 
 format = """
 [](red)\
-[󰀵](bg:red fg:crust)\
+$os\
 $username\
 [](bg:peach fg:red)\
 $directory\
@@ -32,7 +32,7 @@ palette = 'catppuccin_mocha'
 add_newline = true
 
 [os]
-disabled = true
+disabled = false
 style = "bg:red fg:crust"
 
 [os.symbols]

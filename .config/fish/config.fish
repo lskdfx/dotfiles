@@ -8,6 +8,9 @@ fish_add_path /opt/homebrew/bin
 fish_add_path ~/.nix-profile/bin
 fish_add_path ~/.local/bin
 
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/aditgupta/.lmstudio/bin
 # End of LM Studio CLI section

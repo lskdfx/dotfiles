@@ -14,3 +14,7 @@ set -gx VISUAL nvim
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/aditgupta/.lmstudio/bin
 # End of LM Studio CLI section
+
+# terminal-wakatime setup
+set -gx PATH "$HOME/.wakatime" $PATH
+terminal-wakatime init fish | source

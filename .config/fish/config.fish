@@ -18,3 +18,4 @@ set -gx PATH $PATH /Users/aditgupta/.lmstudio/bin
 # terminal-wakatime setup
 set -gx PATH "$HOME/.wakatime" $PATH
 terminal-wakatime init fish | source
+fzf --fish | source

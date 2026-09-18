@@ -19,3 +19,6 @@ set -gx PATH $PATH /Users/aditgupta/.lmstudio/bin
 set -gx PATH "$HOME/.wakatime" $PATH
 terminal-wakatime init fish | source
 fzf --fish | source
+
+# opencode
+fish_add_path /home/aditgupta/.opencode/bin
